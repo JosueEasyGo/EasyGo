@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Página Web - EasyGo Header</title>
+  <style>
+  html {
+  scroll-behavior: smooth;
+}
+/* Barra de Arriba XDDDD */
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      position: fixed;
+      top: 0;
+      left: 10;
+      width: 100%;
+  z-index: 1000;
+}
+
+    }
+
+    /* Logo */
+    .logo img {
+      height: 50px; /* tamaño adecuado para el logo */
+      cursor: pointer;
+      Right: 250px;
+    }
+
+    /* Navegación */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav ul li {
+      /* Para que los links se comporten como elementos en línea dentro del ul */
+    }
+
+ nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0%;
+  background-color: #4CAF50;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+
+    nav ul li a:hover {
+      color: #007bff;
+    }
+    
+/* Botón de contacto */
+.btn-contacto {
+  background-color: #4CAF50; /* Verde exacto */
+  color: #333;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contacto:hover {
+  background-color: #45a049;
+}
+}
+
+/* Animación de oscurecer y aclarar el verde */
+@keyframes pulseGreen {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(0.85);
+  }
+}
+
+/* Cambio de color al pasar el cursor */
+button:hover {
+  background-color: #388E3C; /* verde más oscuro */
+  animation: none; /* detener la animación para que no interfiera */
+}
+
+#expertos {
+  padding: 80px 20px;
+  background-color: white;
+  font-family: Arial, sans-serif;
+}
+
+#expertos .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  position: relative;
+}
+/* LA parte de la chica y el gif */
+/* Contenedor de la imagen con fondo */
+.imagen-con-fondo {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  flex-shrink: 0;
+}
+
+.fondo-gif {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.chica {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* Texto al lado derecho */
+.texto-expertos {
+  flex: 1;
+  color: #003366; /* azul marino */
+  z-index: 2;
+}
+
+.texto-expertos h1 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.texto-expertos p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.texto-expertos ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.texto-expertos ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+
+#expertos::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.0); 
+  z-index: 1;
+}
+
+#expertos .contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2; 
+  padding-left: 10%;
+  padding-right: 200px;
+}
+
+.texto-expertos h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.texto-expertos p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.texto-expertos ul {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.texto-expertos ul li {
+  margin-bottom: 8px;
+}
+
+.btn-contacto {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, filter 0.4s ease;
+  animation: pulseGreen 3s infinite alternate;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-contacto:hover {
+  background-color: #388E3C;
+  animation: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #expertos {
+    background-position: top right, right right;
+    background-size: 100%, cover;
+    padding: 60px 20px;
+  }
+
+  #expertos .contenido {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+/* Botón estilo (ya lo tienes, pero por si acaso) */
+.btn-contacto {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, filter 0.4s ease;
+  animation: pulseGreen 3s infinite alternate;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-contacto:hover {
+  background-color: #0D174F;
+  animation: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #expertos .container {
+    flex-direction: column;
+    text-align: right;
+  }
+
+  #expertos .texto-expertos {
+    min-width: auto;
+  }
+  
+}
+
+
+
+
+.fondo-gif {
+  position: absolute;
+  top: 60%;       /* Subimos el gif un poco (antes 80%) */
+  left: 25%;      /* Lo movemos un poco a la izquierda para que quede detrás de la chica */
+  width: 800px;   /* Agrandamos el gif */
+  height: auto;  /* Agrandamos el gif */
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.8;
+  right: 200px;
+}
+
+.chica {
+  position: relative;
+  width: 420%;     /* Agrandamos la chica un poco */
+  height: auto;
+  z-index: 1;
+  right: 300px;  /* La movemos más a la derecha (antes era margin-right) */
+}
+
+}
+
+/* Estilos generales */
+.servicios {
+  padding: 60px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.servicios h2 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+
+/* Parte de los servicios XDDDDDD */
+
+/* Sección completa */
+
+/* Título */
+.servicios-section h2 {
+  font-family: 'Poppins', sans-serif; /* <- agrega esta línea */
+  font-size: 3em;                     /* <- aumenta tamaño si lo quieres más impactante */
+  font-weight: 900;                   /* <- más grueso */
+  color: #2c3e50;
+  right: 200px
+}
+
+
+/* Grid de tarjetas */
+.servicios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Caja individual */
+.servicio-box {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 320px;
+  padding: 70px 25px 30px 25px; /* espacio superior para ícono flotante */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+.servicio-box:hover {
+  transform: translateY(-10px);
+}
+
+/* Ícono flotante */
+.servicio-box img {
+  height: 100px; /* más grande */
+  position: absolute;
+  top: -50px; /* flota más alto */
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del servicio */
+.servicio-box h3 {
+  font-size: 1.4em;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Descripción */
+.servicio-box p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+  min-height: 70px; /* uniforme */
+}
+
+/* Botón más información */
+.mas-info {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+/* Colores individuales */
+.mas-info.amarillo { color: #f1c40f; }
+.mas-info.azul { color: #3498db; }
+.mas-info.naranja { color: #e67e22; }
+.mas-info.morado { color: #9b59b6; }
+.mas-info.rojo { color: #e74c3c; }
+.mas-info.verde { color: #2ecc71; }
+
+.mas-info:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .servicio-box {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicio-box {
+    width: 100%;
+  }
+}
+
+
+/* Carrusel de logos */
+
+/* Sección LA DEL MAPA XDDDD */
+.nearshore {
+  padding: 100px 20px 60px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.nearshore h2 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.nearshore p {
+  font-size: 1.1em;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.nearshore-img img {
+  width: 90%;
+  max-width: 900px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* LA VIDA LA VIDA ES UN CARRUSEEEL 1 */
+.clientes {
+  background-color: #2c2f36;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.clientes h2 {
+  color: #fff;
+  font-size: 1.8em;
+  margin-bottom: 40px;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(200%); /* por el duplicado */
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-track img {
+  height: 60px;
+  margin: 0 40px;
+  opacity: 0.8;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Animación carrusel */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+/* LA WEBADA DE LAS DEMAS FOTOS  */
+/* Espacio entre secciones */
+.portafolio {
+  padding: 80px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+/* Título */
+.portafolio h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 800;
+}
+
+/* Grid de imágenes */
+.grid-portafolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo de cada imagen */
+.grid-portafolio img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.grid-portafolio img:hover {
+  transform: scale(1.02);
+}
+
+
+.partners-section {
+  position: relative;
+  background-color: #002b5c; /* Azul oscuro */
+  overflow: hidden;
+  padding: 60px 0;
+  color: white;
+}
+
+.partners-overlay h2 {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+/* LA VIDA LA VIDA ES UN CARRUSEL 2 */
+.partners-carousel {
+  display: flex;
+  gap: 60px;
+  animation: scrollPartners 25s linear infinite;
+  width: max-content;
+  align-items: center;
+  justify-content: center;
+}
+
+.partners-carousel img {
+  height: 50px;
+  opacity: 0.2;
+  transition: opacity 0.3s;
+}
+
+.partners-carousel img:hover {
+  opacity: 0.5;
+}
+
+@keyframes scrollPartners {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* LOS ANIMALES RAROS */
+/* === PRODUCTOS SECTION === */
+.productos-section {
+  background-color: #f4f4f4;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.productos-section h2 {
+  font-size: 2.5em;
+  font-weight: 800;
+  margin-bottom: 60px;
+  color: #333;
+}
+
+/* Mostrar 2 tarjetas por fila en desktop */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Fuerza 2 columnas fijas */
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* Tarjeta individual */
+.producto-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+.producto-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen de producto */
+.producto-card img {
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+/* Título */
+.producto-card h3 {
+  font-weight: 800;
+  font-size: 1.6em;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+/* Texto descriptivo */
+.producto-card p {
+  font-size: 1.05em;
+  color: #444;
+  margin-bottom: 30px;
+  line-height: 1.5em;
+}
+
+/* Botón/enlace */
+.producto-card a {
+  color: #ff6600;
+  font-weight: bold;
+  font-size: 1em;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.producto-card a:hover {
+  color: #cc5200;
+}
+
+@media (max-width: 768px) {
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .producto-card {
+    padding: 30px 20px;
+  }
+
+  .producto-card img {
+    height: 70px;
+  }
+}
+
+.quienes-somos-section {
+  background-color: #f9f9f9;
+  padding: 80px 40px;
+}
+
+.quienes-somos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quienes-somos-texto {
+  flex: 1 1 500px;
+}
+
+.quienes-somos-texto h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8em;
+  font-weight: 900;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.quienes-somos-box {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  font-size: 0.95em;
+  color: #333;
+  line-height: 1.6;
+}
+
+.quienes-somos-box p + p {
+  margin-top: 15px;
+}
+
+.quienes-somos-imagen {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.quienes-somos-imagen img {
+  max-width: 150%;
+  height: auto;
+}
+
+
+
+/* La vida La vida es un carrusel 3 */
+.tecnologias-section {
+  background-color: #37b300; /* Verde fuerte */
+  padding: 60px 20px;
+  overflow: hidden;
+}
+
+.tecnologias-section h2 {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  font-weight: 800;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tecnologias-carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.tecnologias-track {
+  display: flex;
+  gap: 60px;
+  animation: scrollTecnologias 30s linear infinite;
+  align-items: center;
+}
+
+.tecnologias-track img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;/* Blanco */
+  transition: transform 0.3s ease;
+}
+
+.tecnologias-track img:hover {
+  transform: scale(1.2);
+}
+
+@keyframes scrollTecnologias {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+#whatsapp-logo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px; /* Tamaño pequeño */
+  height: 60px;
+  z-index: 1000;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25D366; /* color verde WhatsApp */
+  transition: transform 0.3s ease;
+}
+
+#whatsapp-logo img {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+#whatsapp-logo:hover {
+  transform: scale(1.1);
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Cabecera -->
+  <header>
+    <!-- Logo -->
+    <div class="logo">
+      <!-- Usa ruta relativa, coloca la imagen en una carpeta 'images' dentro de tu proyecto -->
+      <a href="#inicio">
+        <img width="140" height="50" src="/home/josue/Escritorio/Prueba/EasyGo_files/1.png">
+      </a>
+    </div>
+
+    <!-- Navegación -->
+    <nav>
+      <ul>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#portafolio">Portafolio</a></li>
+        <li><a href="#quienes-somos">¿Quiénes somos?</a></li>
+        <button class="btn-contacto"><li><a href="#contacto">Contacto</a></li</button>
+
+      </ul>
+    </nav>
+  </header>
+  <p>
+   <br>
+    <br>
+<section id="expertos">
+  <div class="container">
+    <div class="imagen-con-fondo">
+      <img class="fondo-gif" src="/home/josue/Escritorio/Prueba/EasyGo_files/2.gif" alt="Fondo GIF" />
+      <img class="chica" src="/home/josue/Escritorio/Prueba/EasyGo_files/3.png" alt="Chica" />
+    </div>
+    <div class="texto-expertos">
+      <h1>Expertos en Soluciones Tecnológicas</h1>
+      <p>
+        Somos una fábrica de software, dedicada a brindar servicios y productos de alta calidad apoyados en la innovación continua y tecnológica, con el objetivo de:
+      </p>
+      <ul>
+        <li>Cubrir necesidades,</li>
+        <li>Ampliar estrategias,</li>
+        <li>Reducir costos,</li>
+        <li>Mejorar capacidad de atención al cliente y administración de nuestros clientes</li>
+      </ul>
+      <a href="#contacto" class="btn-contacto">Cotiza con nosotros</a>
+    </div>
+  </div>
+</section>
+
+  </div>
+</section>
+ <br>
+  <br>
+   <br>
+    <br>
+     <br>
+      <br>
+       <br>
+        <br>
+         <br>
+          <br>
+           <br>
+            <br>
+             <br>
+              <br>
+               <br>
+                <br>
+<section id="servicios" class="servicios">
+  <h2>SERVICIOS</h2>
+  <div class="servicios-grid">
+
+    <!-- Servicio 1 -->
+    <div class="servicio-box">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/4.png" alt="Desarrollo web">
+      <h3>Desarrollo web</h3>
+      <p>Te acompañamos y aconsejamos para asegurar que tus plataformas sobrepasen las expectativas definidas.</p>
+      <a href="/home/josue/Escritorio/Segunda pag.html" target="_blank" class="mas-info amarillo">Más información</a>
+    </div>
+
+    <!-- Servicio 2 -->
+    <div class="servicio-box">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/5.png" alt="Desarrollo de Apps">
+      <h3>Desarrollo de Apps</h3>
+      <p>Creamos las aplicaciones que tu empresa necesita, desde una aplicación móvil orientada al consumidor.</p>
+      <a href="/home/josue/Escritorio/Prueba/tercera pagina.html" target="_blank" class="mas-info azul">Más información</a>
+    </div>
+
+    <!-- Servicio 3 -->
+    <div class="servicio-box">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/6.png" alt="Diseño web Efectivo">
+      <h3>Diseño web Efectivo</h3>
+      <p>Trabajamos para tener claros los objetivos de nuestros clientes, con un diseño web eficiente y amigable.</p>
+      <a href="/home/josue/Escritorio/Prueba/Cuarta pagina.html" target="_blank" class="mas-info naranja">Más información</a>
+    </div>
+    <!-- Servicio 4 -->
+    <div class="servicio-box">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/7.png" alt="Consultoría Ui Ux">
+      <h3>Consultoría Ui Ux</h3>
+      <p>Te ayudamos a crear la mejor experiencia de usuario para que tus clientes encuentren lo que buscan fácilmente.</p>
+      <a href="/home/josue/Escritorio/Prueba/Pagina cinco.html" target="_blank" class="mas-info morado">Más información</a>
+    </div>
+
+    <!-- Servicio 5 -->
+    <div class="servicio-box">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/8.png" alt="Arquitectura en Cloud">
+      <h3>Arquitectura basada en Cloud</h3>
+      <p>Transforma tu empresa en una arquitectura sin servidores, con servicios escalables y seguros.</p>
+      <a href="/home/josue/Escritorio/Prueba/pagina 6.html" target="_blank" class="mas-info rojo">Más información</a>
+    </div>
+
+    <!-- Servicio 6 -->
+    <div class="servicio-box">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/9.png" alt="Consultoría basada en Cloud">
+      <h3>Consultoría basada en Cloud</h3>
+      <p>Migra tus sistemas antiguos a arquitecturas modernas de microservicios en la nube.</p>
+      <a href="/home/josue/Escritorio/Prueba/pagina siete.html" target="_blank" class="mas-info verde">Más información</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section id="nearshore" class="nearshore">
+  <h2>NEARSHORE</h2>
+  <p>Nos encontramos a menos de tres horas de vuelo de ciudades importantes de Estados Unidos, con los mismos horarios y cultura para que tengas a tu equipo al alcance.</p>
+  
+  <div class="nearshore-img">
+    <img src="/home/josue/Escritorio/Prueba/EasyGo_files/10.png" alt="Mapa Nearshore">
+  </div>
+</section>
+
+
+
+
+<section class="clientes">
+  <h2>MARCAS QUE CONFIAN EN NOSOTROS</h2>
+  <div class="carousel">
+    <div class="carousel-track">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/11.png" alt="Cliente 1">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/12.png" alt="Cliente 2">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/13.png" alt="Cliente 3">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/14.png" alt="Cliente 4">
+
+      <!-- Se duplican para bucle infinito -->
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/11.png" alt="Cliente 1">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/12.png" alt="Cliente 2">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/13.png" alt="Cliente 3">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/14.png" alt="Cliente 4">
+    </div>
+  </div>
+</section>
+<section id="portafolio" class="portafolio">
+  <h2>NUESTRO TRABAJO</h2>
+  <div class="grid-portafolio">
+    <img src="/home/josue/Escritorio/Prueba/EasyGo_files/15.png" alt="Proyecto 1">
+    <img src="/home/josue/Escritorio/Prueba/EasyGo_files/16.png" alt="Proyecto 2">
+    <img src="/home/josue/Escritorio/Prueba/EasyGo_files/17.png" alt="Proyecto 3">
+    <img src="/home/josue/Escritorio/Prueba/EasyGo_files/18.png" alt="Proyecto 4">
+    <img src="/home/josue/Escritorio/Prueba/EasyGo_files/19.png" alt="Proyecto 5">
+    <img src="/home/josue/Escritorio/Prueba/EasyGo_files/20.png" alt="Proyecto 6">
+    <img src="/home/josue/Escritorio/Prueba/EasyGo_files/21.png" alt="Proyecto 7">
+    <img src="/home/josue/Escritorio/Prueba/EasyGo_files/22.png" alt="Proyecto 8">
+    <img src="/home/josue/Escritorio/Prueba/EasyGo_files/23.png" alt="Proyecto 9">
+  </div>
+</section>
+
+<section class="partners-section">
+  <div class="partners-overlay">
+    <h2>NUESTROS PARTNERS</h2>
+    <div class="partners-carousel">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/24.png" alt="Partner 1">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/25.png" alt="Partner 2">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/26.png" alt="Partner 3">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/27.png" alt="Partner 4">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/28.png" alt="Partner 5">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/29.png" alt="Partner 6">
+      <!-- Repetir para efecto infinito -->
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/24.png" alt="Partner 1">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/25.png" alt="Partner 2">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/26.png" alt="Partner 3">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/27.png" alt="Partner 4">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/28.png" alt="Partner 5">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/29.png" alt="Partner 6">
+    </div>
+  </div>
+  
+ <section class="productos-section" id="productos">
+  <h2>¿CONOCES NUESTROS PRODUCTOS?</h2>
+  <div class="productos-grid">
+
+    <div class="producto-card">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/30.png" alt="Let’s Sell"> <!-- Imagen -->
+      <h3>¡Llego la hora de vender!</h3>
+      <p>Tiene un motor de venta de última tecnología, ofreciéndote las mejores funcionalidades de un E-commerce en la nube.</p>
+      <a href="/home/josue/Escritorio/Prueba/Camaleon.html" target="_blank">Llámanos hoy</a>
+    </div>
+
+    <div class="producto-card">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/31.png" alt="Let’s ChatBot"> <!-- Imagen -->
+      <h3>Comunicación 24/7</h3>
+      <p>Automatiza las respuestas, perfila a tus clientes, y ¡hasta vende por ti!</p>
+      <a href="/home/josue/Escritorio/Prueba/Tucan.html" target="_blank">Llámanos hoy</a>
+    </div>
+
+    <div class="producto-card">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/32.png" alt="Let’s GetData"> <!-- Imagen -->
+      <h3>El poder de la data</h3>
+      <p>Te permite captar y perfilar a tus usuarios a través de trivias y juegos.</p>
+      <a href="/home/josue/Escritorio/Prueba/Pantera.html" target="_blank">Llámanos hoy</a>
+    </div>
+
+    <div class="producto-card">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/33.png" alt="Let’s Market"> <!-- Imagen -->
+      <h3>Tienda 24/7</h3>
+      <p>Es un E-commerce especializado que te permite vender bienes muebles y bienes inmuebles.</p>
+      <a href="/home/josue/Escritorio/Prueba/CosaVerde.html" target="_blank">Llámanos hoy</a>
+    </div>
+    
+</section>
+
+
+<section class="quienes-somos-section" id="quienes-somos">
+  <div class="quienes-somos-container">
+    
+    <div class="quienes-somos-texto">
+      <h2>¿QUIÉNES SOMOS?</h2>
+      <div class="quienes-somos-box">
+        <p>
+          Easygo fue fundada en 2006 como una empresa de desarrollo de software orientada a tecnologías Java y UI / UX. Crecemos rápidamente en los sectores de servicios públicos, telecomunicaciones y banca gracias a nuestra organización centrada en el cliente, el aseguramiento de la calidad y las propuestas de innovación. Somos expertos en los frameworks IBM Websphere e IBM Mobile First.
+        </p>
+        <p>
+          Nuestro equipo de más de 50 empleados está compuesto por ingenieros de programación, Especialistas en control de calidad, PM, DBA, arquitectos, todos trabajando en una metodología orientada ágil.
+        </p>
+      </div>
+    </div>
+
+    <div class="quienes-somos-imagen">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/36.png" alt="EasyGo Logo">
+    </div>
+
+  </div>
+</section>
+
+<section class="tecnologias-section">
+  <h2>ALGUNAS DE NUESTRAS TECNOLOGÍAS</h2>
+  <div class="tecnologias-carousel">
+    <div class="tecnologias-track">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-13x.png" alt="Tec 1">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-23x.png" alt="Tec 2">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-33x.png" alt="Tec 3">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-43x.png" alt="Tec 4">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-53x.png" alt="Tec 5">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-63x.png" alt="Tec 6">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-73x.png" alt="Tec 7">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-83x.png" alt="Tec 8">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-93x.png" alt="Tec 9">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-103x.png" alt="Tec 10">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-113x.png" alt="Tec 11">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-123x.png" alt="Tec 12">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-133x.png" alt="Tec 13">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-143x.png" alt="Tec 14">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-153x.png" alt="Tec 15">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-163x.png" alt="Tec 16">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-173x.png" alt="Tec 17">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-183x.png" alt="Tec 18">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-193x.png" alt="Tec 19">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-203x.png" alt="Tec 20">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-213x.png" alt="Tec 21">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-223x.png" alt="Tec 22">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-233x.png" alt="Tec 23">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-243x.png" alt="Tec 24">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-253x.png" alt="Tec 25">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-263x.png" alt="Tec 26">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-273x.png" alt="Tec 27">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-283x.png" alt="Tec 28">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-293x.png" alt="Tec 29">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/Recurso-303x.png" alt="Tec 30">
+    </div>
+  </div>
+</section>
+
+
+<a href="https://api.whatsapp.com/send?phone=50256956369&text=Hola%21%20Necesito%20m%C3%A1s%20informaci%C3%B3n." target="_blank" id="whatsapp-logo">
+  <img src="/home/josue/Escritorio/Prueba/EasyGo_files/WhatsApp.svg.webp" alt="WhatsApp">
+</a>
+
+
+<section id="contacto" style="background-color: #2c3e50; padding: 50px 0;">
+  <h2 style="text-align:center; color: white; font-size: 2em;">CONTÁCTANOS</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 20px;">
+    
+    <!-- Columna de direcciones -->
+    <div style="flex: 1; min-width: 300px; max-width: 500px; color: white; border: 2px solid #7ad000; border-radius: 10px; padding: 20px;">
+      <h4 style="color: #f04e4e;">Guatemala</h4>
+      <ul>
+       <li>
+  <a href="https://www.google.com.mx/maps/place/Edificio+Etisa/@14.6006943,-90.5182839,17z/data=!3m1!4b1!4m6!3m5!1s0x8589a3a7e56081cb:0x373f138524ec140e!8m2!3d14.6006943!4d-90.5182839!16s%2Fg%2F11hzwrbz_n?entry=ttu&g_ep=EgoyMDI1MDkwMi4wIKXMDSoASAFQAw%3D%3D"
+     style="color: white; text-decoration: none; white-space: nowrap;">
+    Dirección 12 calle 7-38 zona 9, edificio Etisa, 3er nivel oficina 4-B
+  </a>
+</li>
+
+        <li><a href="24966510" style="color: white;">PBX: +502 2496 6510</a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=50256956369" style="color: white;">WhatsApp: +502 5595 6369</a></li>
+        <li><a href="#" style="color: white;">Mail: ventas@tppermarketing.com<</a></li>
+      </ul>
+
+      <h4 style="color: #f79f1f;">El Salvador</h4>
+      <ul>
+        <li><a href="#" style="color: white;">Dirección: ventas@tppermarketing.com<</a></li>
+        <li><a href="Tel:+50322639696" style="color: white;">Tel: +503 2263 9696</a></li>
+        <li><a href="#" style="color: white;">Tel: +503 2263 9696</a></li>
+      </ul>
+
+      <h4 style="color: #e67e22;">Honduras</h4>
+      <ul>
+        <li><a href="#" style="color: white;">Dirección</a>: Sarmiento y Asociados...</li>
+        <li><a href="#" style="color: white;">Tel</a>: +504 2550 6380</li>
+      </ul>
+
+      <h4 style="color: #f1c40f;">Nicaragua</h4>
+      <ul>
+        <li><a href="#" style="color: white;">Dirección: Guadamuz Rueda, Martínez...</a></li>
+        <li><a href="#" style="color: white;">Tel: Guadamuz Rueda, Martínez...</a></li>
+        <li><a href="#" style="color: white;">Tel: +505 2278 7708</a></li>
+      </ul>
+
+      <h4 style="color: #3498db;">Costa Rica</h4>
+      <ul>
+        <li><a href="#" style="color: white;">Dirección: PKF Despacho Murill Marchini...</a></li>
+        <li><a href="#" style="color: white;">Tel: +506 2234 1411</a></li>
+      </ul>
+
+      <h4 style="color: #9b59b6;">Panamá</h4>
+      <ul>
+        <li><a href="#" style="color: white;">Dirección: Calle 50, Edificio Global Plaza...</a></li>
+        <li><a href="#" style="color: white;">Tel: 264 9433</a></li>
+        <li><a href="#" style="color: white;">Tel: 264 9523</a></li>
+        <li><a href="#" style="color: white;">WhatsApp: +507 6312 9576</a></li>
+      </ul>
+    </div>
+
+    <!-- Formulario -->
+    <div style="flex: 1; min-width: 300px; max-width: 500px; border: 2px solid #7ad000; border-radius: 10px; padding: 20px; background: #2c3e50;">
+      <form>
+        <label style="color: #7ad000;"><strong>¿Cuál es tu nombre completo?</strong></label>
+        <input type="text" placeholder="Nombre completo" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+
+        <label style="color: #7ad000;"><strong>¿Cuál es tu correo electrónico?</strong></label>
+        <input type="email" placeholder="Ingresa tu correo" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+
+        <label style="color: #7ad000;"><strong>¿Cuál es tu número de teléfono?</strong></label>
+        <input type="tel" placeholder="Número de teléfono" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+
+        <label style="color: #7ad000;"><strong>Déjanos saber un poco más</strong></label>
+        <textarea placeholder="Tu mensaje..." required style="width: 100%; padding: 10px; height: 100px; margin-bottom: 10px;"></textarea>
+
+        <button type="submit" style="width: 100%; padding: 15px; background: linear-gradient(to right, #7ad000, #45b649); color: white; border: none; border-radius: 5px;">ENVIAR</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer style="background-color: #a0e114; color: #222; padding: 40px 20px; font-family: sans-serif;">
+  <!-- Logo -->
+  <div style="text-align: center; margin-bottom: 30px;">
+    <img src="/home/josue/Escritorio/Prueba/EasyGo_files/35.png" alt="Logo EasyGo" style="height: 50px;" />
+  </div>
+
+
+  <!-- Línea superior -->
+  <hr style="border-top: 1px solid #222; margin-bottom: 30px;">
+
+  <!-- Contenido principal -->
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 60px; text-align: left;">
+    
+    <!-- Productos -->
+    <div>
+      <h4><a href="#productos" style="color: #222; text-decoration: none;"><strong>Productos</strong></a></h4>
+      <ul style="list-style: none; padding-left: 0;">
+        <li><a href="/home/josue/Escritorio/Prueba/Camaleon.html" style="color: #222; text-decoration: none;">Let’s Chat</a></li>
+        <li><a href="/home/josue/Escritorio/Prueba/Tucan.html" style="color: #222; text-decoration: none;">Let’s Get Data</a></li>
+        <li><a href="/home/josue/Escritorio/Prueba/Pantera.html" style="color: #222; text-decoration: none;">Let’s Sell</a></li>
+        <li><a href="/home/josue/Escritorio/Prueba/CosaVerde.html" style="color: #222; text-decoration: none;">Let’s Market</a></li>
+      </ul>
+    </div>
+
+    <!-- Servicios -->
+    <div>
+      <h4><a href="#servicios" style="color: #222; text-decoration: none;"><strong>Servicios</strong></a></h4>
+      <ul style="list-style: none; padding-left: 0;">
+        <li><a href="#" style="color: #222; text-decoration: none;">Desarrollo web</a></li>
+        <li><a href="#" style="color: #222; text-decoration: none;">Desarrollo de apps</a></li>
+        <li><a href="#" style="color: #222; text-decoration: none;">Diseño web efectivo</a></li>
+        <li><a href="#" style="color: #222; text-decoration: none;">Consultoría UI UX</a></li>
+        <li><a href="#" style="color: #222; text-decoration: none;">Arquitectura basada en Cloud</a></li>
+        <li><a href="#" style="color: #222; text-decoration: none;">Consultoría basada en Cloud</a></li>
+      </ul>
+    </div>
+
+    <!-- Portafolio -->
+    <div>
+      <h4><a href="#portafolio" style="color: #222; text-decoration: none;"><strong>Portafolio</strong></a></h4>
+      <ul style="list-style: none; padding-left: 0;">
+      </ul>
+    </div>
+
+    <!-- ¿Quiénes somos? -->
+    <div>
+      <h4><a href="#quienes-somos" style="color: #222; text-decoration: none;"><strong>¿Quiénes somos?</strong></a></h4>
+      <ul style="list-style: none; padding-left: 0;">
+        <li><a href="#" style="color: #222; text-decoration: none;">Nuestras tecnologías</a></li>
+        <li><a href="#" style="color: #222; text-decoration: none;">Políticas</a></li>
+        <li><a href="#" style="color: #222; text-decoration: none;">Contáctanos</a></li>
+      </ul>
+    </div>
+  </div>
+    <!-- Botón de contacto -->
+  <div style="text-align: right; margin-bottom: 20px;">
+    <a href="#contacto" style="background-color: #222; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold;">Contáctanos</a>
+  </div>
+
+  <!-- Línea inferior -->
+  <hr style="border-top: 1px solid #222; margin: 30px 0;">
+
+  <!-- Redes sociales -->
+  <div style="text-align: center;">
+    <p style="font-weight: bold;">Conoce más de nosotros en nuestras redes sociales.</p>
+    <a href="https://www.facebook.com/easygosa">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/34.png" alt="Facebook" style="height: 30px;" />
+    </a>
+  </div>
+</footer>
+
+
+</body>
+</html>
+

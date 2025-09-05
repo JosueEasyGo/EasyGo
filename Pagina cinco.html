@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pagina 5 - EasyGo Header</title>
+  <style>
+   /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      position: fixed;
+      top: 0;
+      left: 10;
+      width: 100%;
+  z-index: 1000;
+}
+
+    }
+
+    /* Logo */
+    .logo img {
+      height: 50px; /* tamaño adecuado para el logo */
+      cursor: pointer;
+      Right: 250px;
+    }
+
+    /* Navegación */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav ul li {
+      /* Para que los links se comporten como elementos en línea dentro del ul */
+    }
+
+ nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0%;
+  background-color: #4CAF50;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+
+    nav ul li a:hover {
+      color: #007bff;
+    }
+    
+/* Botón de contacto */
+.btn-contacto {
+  background-color: #4CAF50; /* Verde exacto */
+  color: #333;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contacto:hover {
+  background-color: #45a049;
+}
+}
+
+/* Animación de oscurecer y aclarar el verde */
+@keyframes pulseGreen {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(0.85);
+  }
+}
+
+/* Cambio de color al pasar el cursor */
+button:hover {
+  background-color: #388E3C; /* verde más oscuro */
+  animation: none; /* detener la animación para que no interfiera */
+}
+
+#expertos {
+  padding: 80px 20px;
+  background-color: white;
+  font-family: Arial, sans-serif;
+}
+
+#expertos .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+
+/* === SECCIÓN de lo de amarillo === */
+/* === SECCIÓN PRINCIPAL === */
+.desarrollo-web-section {
+  background: #c032c6;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* === CONTENIDO PRINCIPAL === */
+.contenedor-desarrollo {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+/* === TEXTO === */
+.contenido-texto {
+  flex: 1 1 50%;
+  max-width: 600px;
+  color: White; 
+}
+
+.contenido-texto h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.contenido-texto p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+/* === LISTA === */
+.contenido-texto ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.contenido-texto ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+.contenido-texto ul li::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+/* === ICONO DE COHETE BLANCO === */
+.icono-rocket {
+  margin-bottom: 20px;
+}
+
+.icono-rocket img {
+  width: 100px;
+  height: auto;
+}
+
+/* === IMAGEN DE LA CHICA === */
+.contenido-imagen {
+  flex: 1 1 40%;
+  text-align: right;
+}
+
+.contenido-imagen img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* === RESPONSIVO BÁSICO === */
+@media (max-width: 768px) {
+  .contenedor-desarrollo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contenido-texto, .contenido-imagen {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .contenido-imagen {
+    margin-top: 40px;
+  }
+}
+
+
+/* === FORMULARIO DE CONTACTO === */
+
+/* === FORMULARIO DE CONTACTO === */
+.formulario-contacto {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.formulario-contacto h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: ##ff6d00;
+  margin-bottom: 40px;
+}
+
+.formulario {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario label {
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  color: ##ff6d00;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 15px 20px;
+  font-size: 16px;
+  border: 2px solid #c032c6
+
+;
+  border-radius: 25px;
+  outline: none;
+  resize: none;
+  background: #fff;
+  color: #333;
+}
+
+.formulario textarea {
+  border-radius: 20px;
+}
+
+.formulario button {
+  margin-top: 40px;
+  background-color: #c032c6
+;
+  color: #fff
+;
+  font-weight: bold;
+  border: none;
+  padding: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.formulario button:hover {
+  background-color: #ff6d00
+
+
+;
+}
+
+
+
+
+/* Parte de la wea rara */
+
+.soluciones-digitales {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.soluciones-digitales h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2b2b2b;
+  margin-bottom: 40px;
+}
+
+.grid-soluciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.tarjeta {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 20px 30px 20px;
+  box-shadow: 0 6px 15px rgb(0 0 0 / 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+  box-shadow: 0 12px 25px rgb(0 0 0 / 0.15);
+}
+
+.icono {
+  margin-bottom: 20px;
+}
+
+.icono img {
+  max-width: 70px;
+  height: auto;
+}
+
+.tarjeta h3 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #2b2b2b;
+}
+
+.tarjeta p {
+  font-size: 14px;
+  color: #3a3a3a;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.mas-info {
+  font-weight: 700;
+  color: #ff7400;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.mas-info:hover {
+  color: #e05d00;
+  text-decoration: underline;
+}
+
+ </style>
+</head>
+<body>
+
+  <!-- Cabecera -->
+  <header>
+    <!-- Logo -->
+    <div class="logo">
+      <!-- Usa ruta relativa, coloca la imagen en una carpeta 'images' dentro de tu proyecto -->
+      <a href="#inicio">
+        <img width="140" height="50" src="/home/josue/Escritorio/Prueba/EasyGo_files/1.png">
+      </a>
+    </div>
+
+    <!-- Navegación -->
+    <nav>
+      <ul>
+        <li><a href="/home/josue/Escritorio/Prueba 2.html#productos">Productos</a></li>
+        <li><a href="/home/josue/Escritorio/Prueba 2.html#servicios">Servicios</a></li>
+        <li><a href="/home/josue/Escritorio/Prueba 2.html#portafolio">Portafolio</a></li>
+        <li><a href="/home/josue/Escritorio/Prueba 2.html#quienes-somos">¿Quiénes somos?</a></li>
+        <button class="btn-contacto"><li><a href="/home/josue/Escritorio/Prueba 2.html#contacto">Contacto</a></li</button>
+        
+        <!-- Esta es la seccion azul XDDDD -->
+        
+            >
+      </ul>
+    </nav>
+  </header>
+  <p>
+   <br>
+    <br>
+        
+<section class="desarrollo-web-section">
+  <div class="contenedor-desarrollo">
+    <div class="contenido-texto">
+      <!-- Ícono blanco del cohete -->
+      <div class="icono-rocket">
+        <img src="/home/josue/Escritorio/Prueba/EasyGo_files/7.png" alt="Icono Cohete" />
+      </div>
+
+      <h2>DESAROLLO WEB</h2>
+      <p>
+        Los usuarios de internet son más de 4,950 millones, aprovecha esta ventana de infinitas posibilidades creando, mejorando y posicionando tu negocio, a través del desarrollo de plataformas web con altos estándares de calidad y que al mismo te ayuda a reducir tus costos operativos.
+      </p>
+      <p>
+        Desarrollamos y trabajamos plataformas web que se adecuen a los distintos ambientes empleados en la industria.
+      </p>
+      <ul>
+        <li>Mobile</li>
+        <li>Desktop</li>
+        <li>Tablet</li>
+        <li>Etc</li>
+      </ul>
+    </div>
+
+    <div class="contenido-imagen">
+      <img src="/home/josue/Escritorio/Prueba/EasyGo_files/40.png" alt="Chica señalando" />
+    </div>
+  </div>
+</section>
+
+ <!-- Esta es la seccion de encuesta XDDDD -->
+
+    <section class="formulario-contacto">
+  <h2>¿Necesitas esta solución?</h2>
+
+  <form action="#" method="post" class="formulario">
+    <label for="nombre">¿Cuál es tu nombre completo?</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+
+    <label for="email">¿Cuál es tu correo electrónico?</label>
+    <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+
+    <label for="telefono">¿Cuál es tu número de teléfono?</label>
+    <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu número de teléfono" required>
+
+    <label for="mensaje">Déjanos saber un poco más</label>
+    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+
+    <!-- Aquí puedes agregar tu reCAPTCHA invisible o visible -->
+    <!-- <div class="g-recaptcha" data-sitekey="TU_SITE_KEY"></div> -->
+
+    <button type="submit">ENVIAR</button>
+  </form>
+</section>
+
+
+<!-- Esta es la seccion de las weas en tarjetas XDDDD -->
+
+<section class="soluciones-digitales">
+  <h2>Conoce nuestras otras soluciones digitales</h2>
+  <div class="grid-soluciones">
+
+    <article class="tarjeta">
+      <div class="icono">
+        <img src="/home/josue/Escritorio/Prueba/EasyGo_files/4.png" alt="Desarrollo web">
+      </div>
+      <h3>Desarrollo web</h3>
+      <p>Te acompañamos y aconsejamos para asegurar que tus plataformas sobrepasen las expectativas definidas, así sean sistemas de Ecommerce, autogestión, entretenimiento o informativos</p>
+      <a href="/home/josue/Escritorio/Segunda pag.html" target="_blank" class="mas-info">Más información</a>
+    </article>
+
+    <article class="tarjeta">
+      <div class="icono">
+        <img src="/home/josue/Escritorio/Prueba/EasyGo_files/5.png" alt="Desarrollo de Apps">
+      </div>
+      <h3>Desarrollo de Apps</h3>
+      <p>Creamos las aplicaciones que tu empresa necesita, desde una aplicación móvil orientada al consumidor para atraer mejor a tus clientes, hasta aplicaciones empresariales para agilizar tus operaciones internas.</p>
+      <a href="/home/josue/Escritorio/Prueba/tercera pagina.html" target="_blank" class="mas-info">Más información</a>
+    </article>
+
+    <article class="tarjeta">
+      <div class="icono">
+        <img src="/home/josue/Escritorio/Prueba/EasyGo_files/6.png" alt="Diseño web Efectivo">
+      </div>
+      <h3>Diseño web Efectivo</h3>
+      <p>Trabajamos para tener claros los principales objetivos de nuestros clientes, para crear sitios con un diseño web eficiente y amigable.</p>
+      <a href="/home/josue/Escritorio/Prueba/Cuarta pagina.html" target="_blank" class="mas-info">Más información</a>
+    </article>
+
+    <article class="tarjeta">
+      <div class="icono">
+        <img src="/home/josue/Escritorio/Prueba/EasyGo_files/7.png" alt="Consultoría Ui Ux">
+      </div>
+      <h3>Consultoría Ui Ux</h3>
+      <p>Te ayudamos a crear la mejor experiencia de usuarios que tus clientes se merecen, para que les permita encontrar de forma fácil y rápido lo que busca.</p>
+      <a href="/home/josue/Escritorio/Prueba/Pagina cinco.html" target="_blank" class="mas-info">Más información</a>
+    </article>
+
+    <article class="tarjeta">
+      <div class="icono">
+        <img src="/home/josue/Escritorio/Prueba/EasyGo_files/8.png" alt="Arquitectura basada en Cloud">
+      </div>
+      <h3>Arquitectura basada en Cloud</h3>
+      <p>Transforma tu empresa en una arquitectura sin servidores, con servicios en la nube escalables, seguros y adaptables a cualquier tipo de tecnología.</p>
+      <a href="/home/josue/Escritorio/Prueba/pagina 6.html" target="_blank" class="mas-info">Más información</a>
+    </article>
+
+    <article class="tarjeta">
+      <div class="icono">
+        <img src="/home/josue/Escritorio/Prueba/EasyGo_files/9.png" alt="Consultoría basada en cloud">
+      </div>
+      <h3>Consultoría basada en cloud</h3>
+      <p>Migra tus sistemas antiguos a arquitecturas de microservidores en la nube para ahorrarte costos y modernizar tus aplicaciones antiguas.</p>
+      <a href="/home/josue/Escritorio/Prueba/pagina siete.html" target="_blank" class="mas-info">Más información</a>
+    </article>
+
+  </div>
+</section>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Esta es la seccion de la pata XDDDD -->
+
+  <footer style="background-color: #a0e114; color: #222; padding: 40px 20px; font-family: sans-serif;">
+  <div style="text-align: center; margin-bottom: 30px;">
+    <img src="/home/josue/Escritorio/Prueba/EasyGo_files/35.png" alt="Logo EasyGo" style="height: 50px;" />
+  </div>
+
+  <hr style="border-top: 1px solid #222; margin-bottom: 30px;">
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 60px; text-align: left;">
+    <div>
+      <h4><strong>Productos</strong></h4>
+      <ul style="list-style: none; padding-left: 0;">
+        <li><a href="#">Let’s Chat</a></li>
+        <li><a href="#">Let’s Get Data</a></li>
+        <li><a href="#">Let’s Sell</a></li>
+        <li><a href="#">Let’s Market</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4><strong>Servicios</strong></h4>
+      <ul style="list-style: none; padding-left: 0;">
+        <li><a href="#">Desarrollo web</a></li>
+        <li><a href="#">Desarrollo de apps</a></li>
+        <li><a href="#">Diseño web efectivo</a></li>
+        <li><a href="#">Consultoría UI UX</a></li>
+        <li><a href="#">Arquitectura basada en Cloud</a></li>
+        <li><a href="#">Consultoría basada en Cloud</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4><strong>Portafolio</strong></h4>
+      <ul style="list-style: none; padding-left: 0;">
+        <li><a href="#">Ver portafolio</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4><strong>¿Quiénes somos?</strong></h4>
+      <ul style="list-style: none; padding-left: 0;">
+        <li><a href="#">Nuestras tecnologías</a></li>
+        <li><a href="#">Políticas</a></li>
+        <li><a href="#">Contáctanos</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr style="border-top: 1px solid #222; margin: 30px 0;">
+
+  <div style="text-align: center;">
+    <p style="font-weight: bold;">Conoce más de nosotros en nuestras redes sociales.</p>
+    <a href="#"><img src="/home/josue/Escritorio/Prueba/EasyGo_files/34.png" alt="Facebook" style="height: 30px;" /></a>
+  </div>
+</footer>
+  </body>
+</html>
