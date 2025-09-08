@@ -1,0 +1,824 @@
+html { 
+  scroll-behavior: smooth;}
+/* Barra de Arriba XDDDD */
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      position: fixed;
+      top: 0;
+      left: 10px;
+      width: 100%;
+  z-index: 1000;
+}
+
+
+
+    /* Logo */
+    .logo img {
+      height: 50px; /* tamaño adecuado para el logo */
+      cursor: pointer;
+      right: 250px;
+    }
+
+    /* Navegación */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav ul li {
+      /* Para que los links se comporten como elementos en línea dentro del ul */
+    }
+
+ nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0%;
+  background-color: #4CAF50;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+
+    nav ul li a:hover {
+      color: #007bff;
+    }
+    
+/* Botón de contacto */
+.btn-contacto {
+  background-color: #4CAF50; /* Verde exacto */
+  color: #333;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contacto:hover {
+  background-color: #45a049;
+}
+}
+
+/* Animación de oscurecer y aclarar el verde */
+@keyframes pulseGreen {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(0.85);
+  }
+}
+
+/* Cambio de color al pasar el cursor */
+button:hover {
+  background-color: #388E3C; /* verde más oscuro */
+  animation: none; /* detener la animación para que no interfiera */
+}
+
+#expertos {
+  padding: 80px 20px;
+  background-color: white;
+  font-family: Arial, sans-serif;
+}
+
+#expertos .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  position: relative;
+}
+/* LA parte de la chica y el gif */
+/* Contenedor de la imagen con fondo */
+.imagen-con-fondo {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  flex-shrink: 0;
+}
+
+.fondo-gif {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.chica {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* Texto al lado derecho */
+.texto-expertos {
+  flex: 1;
+  color: #003366; /* azul marino */
+  z-index: 2;
+}
+
+.texto-expertos h1 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.texto-expertos p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.texto-expertos ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.texto-expertos ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+
+#expertos::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.0); 
+  z-index: 1;
+}
+
+#expertos .contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2; 
+  padding-left: 10%;
+  padding-right: 200px;
+}
+
+.texto-expertos h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.texto-expertos p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.texto-expertos ul {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.texto-expertos ul li {
+  margin-bottom: 8px;
+}
+
+.btn-contacto {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, filter 0.4s ease;
+  animation: pulseGreen 3s infinite alternate;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-contacto:hover {
+  background-color: #388E3C;
+  animation: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #expertos {
+    background-position: top right, right right;
+    background-size: 100%, cover;
+    padding: 60px 20px;
+  }
+
+  #expertos .contenido {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+/* Botón estilo (ya lo tienes, pero por si acaso) */
+.btn-contacto {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, filter 0.4s ease;
+  animation: pulseGreen 3s infinite alternate;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-contacto:hover {
+  background-color: #0D174F;
+  animation: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #expertos .container {
+    flex-direction: column;
+    text-align: right;
+  }
+
+  #expertos .texto-expertos {
+    min-width: auto;
+  }
+  
+}
+
+
+
+
+.fondo-gif {
+  position: absolute;
+  top: 60%;       /* Subimos el gif un poco (antes 80%) */
+  left: 25%;      /* Lo movemos un poco a la izquierda para que quede detrás de la chica */
+  width: 800px;   /* Agrandamos el gif */
+  height: auto;  /* Agrandamos el gif */
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.8;
+  right: 200px;
+}
+
+.chica {
+  position: relative;
+  width: 420%;     /* Agrandamos la chica un poco */
+  height: auto;
+  z-index: 1;
+  right: 300px;  /* La movemos más a la derecha (antes era margin-right) */
+}
+
+}
+
+/* Estilos generales */
+.servicios {
+  padding: 60px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.servicios h2 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+
+/* Parte de los servicios XDDDDDD */
+
+/* Sección completa */
+
+/* Título */
+.servicios-section h2 {
+  font-family: 'Poppins', sans-serif; /* <- agrega esta línea */
+  font-size: 3em;                     /* <- aumenta tamaño si lo quieres más impactante */
+  font-weight: 900;                   /* <- más grueso */
+  color: #2c3e50;
+  right: 200px
+}
+
+
+/* Grid de tarjetas */
+.servicios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Caja individual */
+.servicio-box {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 320px;
+  padding: 70px 25px 30px 25px; /* espacio superior para ícono flotante */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+.servicio-box:hover {
+  transform: translateY(-10px);
+}
+
+/* Ícono flotante */
+.servicio-box img {
+  height: 100px; /* más grande */
+  position: absolute;
+  top: -50px; /* flota más alto */
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del servicio */
+.servicio-box h3 {
+  font-size: 1.4em;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Descripción */
+.servicio-box p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+  min-height: 70px; /* uniforme */
+}
+
+/* Botón más información */
+.mas-info {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+/* Colores individuales */
+.mas-info.amarillo { color: #f1c40f; }
+.mas-info.azul { color: #3498db; }
+.mas-info.naranja { color: #e67e22; }
+.mas-info.morado { color: #9b59b6; }
+.mas-info.rojo { color: #e74c3c; }
+.mas-info.verde { color: #2ecc71; }
+
+.mas-info:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .servicio-box {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicio-box {
+    width: 100%;
+  }
+}
+
+
+/* Carrusel de logos */
+
+/* Sección LA DEL MAPA XDDDD */
+.nearshore {
+  padding: 100px 20px 60px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.nearshore h2 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.nearshore p {
+  font-size: 1.1em;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.nearshore-img img {
+  width: 90%;
+  max-width: 900px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* LA VIDA LA VIDA ES UN CARRUSEEEL 1 */
+.clientes {
+  background-color: #2c2f36;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.clientes h2 {
+  color: #fff;
+  font-size: 1.8em;
+  margin-bottom: 40px;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(200%); /* por el duplicado */
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-track img {
+  height: 60px;
+  margin: 0 40px;
+  opacity: 0.8;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Animación carrusel */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+/* LA WEBADA DE LAS DEMAS FOTOS  */
+/* Espacio entre secciones */
+.portafolio {
+  padding: 80px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+/* Título */
+.portafolio h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 800;
+}
+
+/* Grid de imágenes */
+.grid-portafolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo de cada imagen */
+.grid-portafolio img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.grid-portafolio img:hover {
+  transform: scale(1.02);
+}
+
+
+.partners-section {
+  position: relative;
+  background-color: #002b5c; /* Azul oscuro */
+  overflow: hidden;
+  padding: 60px 0;
+  color: white;
+}
+
+.partners-overlay h2 {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+/* LA VIDA LA VIDA ES UN CARRUSEL 2 */
+.partners-carousel {
+  display: flex;
+  gap: 60px;
+  animation: scrollPartners 25s linear infinite;
+  width: max-content;
+  align-items: center;
+  justify-content: center;
+}
+
+.partners-carousel img {
+  height: 50px;
+  opacity: 0.2;
+  transition: opacity 0.3s;
+}
+
+.partners-carousel img:hover {
+  opacity: 0.5;
+}
+
+@keyframes scrollPartners {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* LOS ANIMALES RAROS */
+/* === PRODUCTOS SECTION === */
+.productos-section {
+  background-color: #f4f4f4;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.productos-section h2 {
+  font-size: 2.5em;
+  font-weight: 800;
+  margin-bottom: 60px;
+  color: #333;
+}
+
+/* Mostrar 2 tarjetas por fila en desktop */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Fuerza 2 columnas fijas */
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* Tarjeta individual */
+.producto-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+.producto-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen de producto */
+.producto-card img {
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+/* Título */
+.producto-card h3 {
+  font-weight: 800;
+  font-size: 1.6em;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+/* Texto descriptivo */
+.producto-card p {
+  font-size: 1.05em;
+  color: #444;
+  margin-bottom: 30px;
+  line-height: 1.5em;
+}
+
+/* Botón/enlace */
+.producto-card a {
+  color: #ff6600;
+  font-weight: bold;
+  font-size: 1em;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.producto-card a:hover {
+  color: #cc5200;
+}
+
+@media (max-width: 768px) {
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .producto-card {
+    padding: 30px 20px;
+  }
+
+  .producto-card img {
+    height: 70px;
+  }
+}
+
+.quienes-somos-section {
+  background-color: #f9f9f9;
+  padding: 80px 40px;
+}
+
+.quienes-somos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quienes-somos-texto {
+  flex: 1 1 500px;
+}
+
+.quienes-somos-texto h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8em;
+  font-weight: 900;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.quienes-somos-box {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  font-size: 0.95em;
+  color: #333;
+  line-height: 1.6;
+}
+
+.quienes-somos-box p + p {
+  margin-top: 15px;
+}
+
+.quienes-somos-imagen {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.quienes-somos-imagen img {
+  max-width: 150%;
+  height: auto;
+}
+
+
+
+/* La vida La vida es un carrusel 3 */
+.tecnologias-section {
+  background-color: #37b300; /* Verde fuerte */
+  padding: 60px 20px;
+  overflow: hidden;
+}
+
+.tecnologias-section h2 {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  font-weight: 800;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tecnologias-carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.tecnologias-track {
+  display: flex;
+  gap: 60px;
+  animation: scrollTecnologias 30s linear infinite;
+  align-items: center;
+}
+
+.tecnologias-track img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;/* Blanco */
+  transition: transform 0.3s ease;
+}
+
+.tecnologias-track img:hover {
+  transform: scale(1.2);
+}
+
+@keyframes scrollTecnologias {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+#whatsapp-logo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px; /* Tamaño pequeño */
+  height: 60px;
+  z-index: 1000;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25D366; /* color verde WhatsApp */
+  transition: transform 0.3s ease;
+}
+
+#whatsapp-logo img {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+#whatsapp-logo:hover {
+  transform: scale(1.1);
+}
+
