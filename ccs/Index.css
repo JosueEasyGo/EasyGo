@@ -2,114 +2,91 @@ html {
   scroll-behavior: smooth;}
 /* Barra de Arriba XDDDD */
     /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-    }
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    /* Header */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 20px;
-      background-color: #fff;
-      border-bottom: 1px solid #ddd;
-      position: fixed;
-      top: 0;
-      left: 10px;
-      width: 100%;
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
 }
 
+/* Logo */
+.logo img {
+  height: 50px;
+  cursor: pointer;
+}
 
+/* Navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
 
-    /* Logo */
-    .logo img {
-      height: 50px; /* tamaño adecuado para el logo */
-      cursor: pointer;
-      right: 250px;
-    }
-
-    /* Navegación */
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-      align-items: center;
-    }
-
-    nav ul li {
-      /* Para que los links se comporten como elementos en línea dentro del ul */
-    }
-
- nav ul li a {
+nav ul li a {
   position: relative;
   text-decoration: none;
-  color: #333;
+  color: #000; /* negro */
   font-weight: 600;
   font-size: 16px;
   padding: 5px 0;
   transition: color 0.3s ease;
 }
 
+/* Línea verde debajo de cada link */
 nav ul li a::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 0%;
-  background-color: #4CAF50;
-  transition: width 0.3s ease;
-  border-radius: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -4px;
+  height: 5px;
+  width: 30px;
+  background-color: #94d500; /* Verde brillante cromado */
+  border-radius: 10px;
+  opacity: 1;
 }
 
-nav ul li a:hover::after {
-  width: 100%;
+/* Estilo para el link activo (azul) */
+nav ul li a.active {
+  color: #007bff; /* Azul activo */
 }
 
-
-    nav ul li a:hover {
-      color: #007bff;
-    }
-    
 /* Botón de contacto */
 .btn-contacto {
-  background-color: #4CAF50; /* Verde exacto */
-  color: #333;
+  background-color: #94d500;
+  color: white;
   padding: 8px 18px;
-  border-radius: 6px;
+  border-radius: 30px;
   font-weight: bold;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
 .btn-contacto:hover {
-  background-color: #45a049;
-}
-}
-
-/* Animación de oscurecer y aclarar el verde */
-@keyframes pulseGreen {
-  0% {
-    filter: brightness(1);
-  }
-  100% {
-    filter: brightness(0.85);
-  }
+  background-color: #76b400;
+  color: white;
 }
 
-/* Cambio de color al pasar el cursor */
-button:hover {
-  background-color: #388E3C; /* verde más oscuro */
-  animation: none; /* detener la animación para que no interfiera */
-}
-
+/* Sección */
 #expertos {
   padding: 80px 20px;
   background-color: white;
@@ -125,6 +102,7 @@ button:hover {
   flex-wrap: wrap;
   position: relative;
 }
+
 /* LA parte de la chica y el gif */
 /* Contenedor de la imagen con fondo */
 .imagen-con-fondo {
